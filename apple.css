@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #000000;
+  color: #f5f5f7;
+  overflow-x: hidden;
+}
+
+/* Navbar Utama */
+.global-nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.nav-item {
+  cursor: pointer;
+  color: #f5f5f7;
+  font-size: 12px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:hover {
+  opacity: 1;
+}
+
+/* Pengaturan Ukuran Logo Apple di Navbar (Diperbesar) */
+.nav-logo {
+  height: 40px; /* Ubah angka ini jika ingin lebih besar atau kecil */
+  width: auto;
+  display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #1d1d1f;
+  border-bottom: 1px solid #d2d2d7;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  padding: 40px 0 60px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.dropdown-column h4 {
+  font-size: 12px;
+  color: #86868b;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.dropdown-column ul {
+  list-style: none;
+}
+
+.dropdown-column li {
+  margin-bottom: 12px;
+}
+
+.dropdown-column a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.dropdown-column a:hover {
+  color: #0066cc;
+}
+
+.dropdown-column li.small-link a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Showcase Sections */
+.showcase-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #000;
+  border-bottom: 12px solid #111;
+  padding: 40px 20px;
+}
+
+.product-layer {
+  position: relative;
+  z-index: 2;
+  max-width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-layer img {
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.product-info {
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.product-info h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 18px;
+  color: #86868b;
+  margin-bottom: 16px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-blue {
+  background-color: #0071e3;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2997ff;
+  border: 1px solid #2997ff;
+  padding: 8px 18px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-outline:hover {
+  background-color: #2997ff;
+  color: white;
+}
+
+/* Grid Showcase Dua Kolom */
+.grid-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.grid-box {
+  background-color: #0b0b0b;
+  border: 1px solid #1f1f1f;
+  border-radius: 20px;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.grid-box img {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #86868b;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #222;
+  margin-top: 40px;
+}

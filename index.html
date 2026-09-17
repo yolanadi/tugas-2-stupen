@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple (Indonesia)</title>
+    <link rel="stylesheet" href="apple.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="global-nav">
+      <ul class="nav-list">
+        <!-- Menggunakan logo.png -->
+        <li class="nav-item">
+          <a href="#"
+            ><img
+              src="logo.png"
+              alt="Apple Logo"
+              style="height: 40px; width: auto"
+          /></a>
+        </li>
+        <li class="nav-item" onclick="toggleDropdown('store')">Store</li>
+        <li class="nav-item" onclick="toggleDropdown('mac')">Mac</li>
+        <li class="nav-item">iPad</li>
+        <li class="nav-item">iPhone</li>
+        <li class="nav-item">Watch</li>
+        <li class="nav-item">Vision</li>
+        <li class="nav-item">AirPods</li>
+        <li class="nav-item">TV & Rumah</li>
+        <li class="nav-item">Hiburan</li>
+        <li class="nav-item">Support</li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+    </nav>
+
+    <!-- Dropdown Store -->
+    <div id="store" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Belanja Produk Terbaru</h4>
+          <ul>
+            <li><a href="#">Belanja Semua Produk Terbaru</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Apple Watch</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li class="small-link"><a href="#">Temukan Toko</a></li>
+            <li class="small-link"><a href="#">Status Pesanan</a></li>
+            <li class="small-link"><a href="#">Tukar Tambah Apple</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Toko Khusus Belanja</h4>
+          <ul>
+            <li class="small-link"><a href="#">Pendidikan</a></li>
+            <li class="small-link"><a href="#">Bisnis</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Mac -->
+    <div id="mac" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Jelajahi Mac</h4>
+          <ul>
+            <li><a href="#">Jelajahi Semua Mac</a></li>
+            <li><a href="#">MacBook Air</a></li>
+            <li><a href="#">MacBook Pro</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Toko Mac</h4>
+          <ul>
+            <li class="small-link"><a href="#">Toko Mac</a></li>
+            <li class="small-link"><a href="#">Bantu Saya Memilih</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Selengkapnya dari Mac</h4>
+          <ul>
+            <li class="small-link"><a href="#">Dukungan Mac</a></li>
+            <li class="small-link"><a href="#">macOS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Showcase 1: iPhone Pro (gambarawal.jpeg) -->
+    <section class="showcase-section">
+      <div class="product-info">
+        <h2>iPhone 17 Pro</h2>
+        <p>Titik maksimum performa dan keindahan desain.</p>
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Selengkapnya</a>
+          <a href="#" class="btn-outline">Beli</a>
+        </div>
+      </div>
+      <div class="product-layer" style="margin-top: 30px">
+        <img src="gambarawal.jpeg" alt="iPhone Pro" />
+      </div>
+    </section>
+
+    <!-- Showcase 2: iPhone Duo / Lipat (gambar3.jpeg) -->
+    <section class="showcase-section">
+      <div class="product-info">
+        <h2>iPhone Duo</h2>
+        <p>Masa depan dalam genggaman Anda. Layar lipat revolusioner.</p>
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Pelajari selengkapnya</a>
+          <a href="#" class="btn-outline">Lihat harga</a>
+        </div>
+      </div>
+      <div class="product-layer" style="margin-top: 30px">
+        <img src="gambar3.jpeg" alt="iPhone Duo" style="max-width: 500px" />
+      </div>
+    </section>
+
+    <!-- Grid Showcase: Apple Watch (gambar2.jpeg dan gambar1.jpeg) -->
+    <div class="grid-showcase">
+      <div class="grid-box">
+        <div>
+          <h3 style="font-size: 28px; font-weight: 600">WATCH SERIES 12</h3>
+          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
+            Sensor kesehatan detak jantung mutakhir.
+          </p>
+        </div>
+        <img src="gambar2.jpeg" alt="Apple Watch Series 12" />
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Selengkapnya</a>
+          <a href="#" class="btn-outline">Beli</a>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div>
+          <h3 style="font-size: 28px; font-weight: 600">WATCH ULTRA 4</h3>
+          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
+            Dibuat untuk ketahanan petualangan ekstrem.
+          </p>
+        </div>
+        <img src="gambar1.jpeg" alt="Apple Watch Ultra 4" />
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Selengkapnya</a>
+          <a href="#" class="btn-outline">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Hak Cipta © 2026 Apple Inc. Dilindungi undang-undang.</p>
+    </footer>
+
+    <!-- Script Dropdown Navbar -->
+    <script>
+      function toggleDropdown(menuId) {
+        const dropdowns = document.querySelectorAll(".dropdown-menu");
+
+        dropdowns.forEach((menu) => {
+          if (menu.id !== menuId) {
+            menu.classList.remove("active");
+          }
+        });
+
+        const targetMenu = document.getElementById(menuId);
+        targetMenu.classList.toggle("active");
+      }
+
+      window.onclick = function (event) {
+        if (
+          !event.target.closest(".global-nav") &&
+          !event.target.closest(".dropdown-menu")
+        ) {
+          document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+            menu.classList.remove("active");
+          });
+        }
+      };
+    </script>
+  </body>
+</html>
