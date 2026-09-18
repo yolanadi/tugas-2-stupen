@@ -10,14 +10,8 @@
     <!-- Navbar -->
     <nav class="global-nav">
       <ul class="nav-list">
-        <!-- Menggunakan logo.png -->
         <li class="nav-item">
-          <a href="#"
-            ><img
-              src="logo.png"
-              alt="Apple Logo"
-              style="height: 40px; width: auto"
-          /></a>
+          <a href="#"><img src="logo.png" alt="Apple Logo" class="nav-logo" /></a>
         </li>
         <li class="nav-item" onclick="toggleDropdown('store')">Store</li>
         <li class="nav-item" onclick="toggleDropdown('mac')">Mac</li>
@@ -29,127 +23,94 @@
         <li class="nav-item">TV & Rumah</li>
         <li class="nav-item">Hiburan</li>
         <li class="nav-item">Support</li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
       </ul>
     </nav>
 
-    <!-- Dropdown Store -->
-    <div id="store" class="dropdown-menu">
-      <div class="dropdown-content">
-        <div class="dropdown-column">
-          <h4>Belanja Produk Terbaru</h4>
-          <ul>
-            <li><a href="#">Belanja Semua Produk Terbaru</a></li>
-            <li><a href="#">Mac</a></li>
-            <li><a href="#">iPad</a></li>
-            <li><a href="#">iPhone</a></li>
-            <li><a href="#">Apple Watch</a></li>
-          </ul>
-        </div>
-        <div class="dropdown-column">
-          <h4>Tautan Cepat</h4>
-          <ul>
-            <li class="small-link"><a href="#">Temukan Toko</a></li>
-            <li class="small-link"><a href="#">Status Pesanan</a></li>
-            <li class="small-link"><a href="#">Tukar Tambah Apple</a></li>
-          </ul>
-        </div>
-        <div class="dropdown-column">
-          <h4>Toko Khusus Belanja</h4>
-          <ul>
-            <li class="small-link"><a href="#">Pendidikan</a></li>
-            <li class="small-link"><a href="#">Bisnis</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dropdown Mac -->
-    <div id="mac" class="dropdown-menu">
-      <div class="dropdown-content">
-        <div class="dropdown-column">
-          <h4>Jelajahi Mac</h4>
-          <ul>
-            <li><a href="#">Jelajahi Semua Mac</a></li>
-            <li><a href="#">MacBook Air</a></li>
-            <li><a href="#">MacBook Pro</a></li>
-          </ul>
-        </div>
-        <div class="dropdown-column">
-          <h4>Toko Mac</h4>
-          <ul>
-            <li class="small-link"><a href="#">Toko Mac</a></li>
-            <li class="small-link"><a href="#">Bantu Saya Memilih</a></li>
-          </ul>
-        </div>
-        <div class="dropdown-column">
-          <h4>Selengkapnya dari Mac</h4>
-          <ul>
-            <li class="small-link"><a href="#">Dukungan Mac</a></li>
-            <li class="small-link"><a href="#">macOS</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Showcase 1: iPhone Pro (gambarawal.jpeg) -->
+    <!-- Showcase iPhone 17 Pro -->
     <section class="showcase-section">
       <div class="product-info">
-        <h2>iPhone 17 Pro</h2>
+        <h2>iPhone 18 Pro</h2>
         <p>Titik maksimum performa dan keindahan desain.</p>
         <div class="btn-group">
           <a href="#" class="btn-blue">Selengkapnya</a>
           <a href="#" class="btn-outline">Beli</a>
         </div>
       </div>
-      <div class="product-layer" style="margin-top: 30px">
-        <img src="gambarawal.jpeg" alt="iPhone Pro" />
+      <div class="product-layer">
+        <img src="gambarawal.png" alt="iPhone Pro" />
       </div>
     </section>
 
-    <!-- Showcase 2: iPhone Duo / Lipat (gambar3.jpeg) -->
-    <section class="showcase-section">
-      <div class="product-info">
+    <!-- BAGIAN 1: iPhone Duo -->
+    <section class="section-duo-target">
+      <div class="product-info-target">
         <h2>iPhone Duo</h2>
         <p>Masa depan dalam genggaman Anda. Layar lipat revolusioner.</p>
-        <div class="btn-group">
-          <a href="#" class="btn-blue">Pelajari selengkapnya</a>
-          <a href="#" class="btn-outline">Lihat harga</a>
+        <div class="info-details-target">
+          Pre-order mulai 05.00 pagi. PT pada 10.16<br />
+          Tersedia mulai 10.23
+        </div>
+        <div class="btn-group-target">
+          <a href="#" class="btn-blue-target">Pelajari selengkapnya</a>
+          <a href="#" class="btn-outline-blue-target">Lihat harga</a>
         </div>
       </div>
-      <div class="product-layer" style="margin-top: 30px">
-        <img src="gambar3.jpeg" alt="iPhone Duo" style="max-width: 500px" />
+      <div class="product-image-target">
+        <img src="gambar3.jpg" alt="iPhone Duo" />
       </div>
     </section>
 
-    <!-- Grid Showcase: Apple Watch (gambar2.jpeg dan gambar1.jpeg) -->
-    <div class="grid-showcase">
-      <div class="grid-box">
-        <div>
-          <h3 style="font-size: 28px; font-weight: 600">WATCH SERIES 12</h3>
-          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
-            Sensor kesehatan detak jantung mutakhir.
-          </p>
+    <!-- BAGIAN 2: WATCH SERIES 12 -->
+    <section class="section-watch12-target">
+      <div class="product-info-target">
+        <h3><img src="logo.png" alt="Apple Logo" class="apple-logo-img" />WATCH</h3>
+        <span class="series-tag-target">SERIES 12</span>
+      </div>
+      <div class="product-image-full-target">
+        <img src="gambar2.jpg" alt="Watch Series 12" />
+      </div>
+      <div class="product-details-target">
+        <p>Sensor kesehatan detak jantung mutakhir.</p>
+        <div class="info-details-target">Tersedia mulai 9.18</div>
+        <div class="btn-group-target">
+          <a href="#" class="btn-blue-target">Selengkapnya</a>
+          <a href="#" class="btn-outline-blue-target">Beli</a>
         </div>
-        <img src="gambar2.jpeg" alt="Apple Watch Series 12" />
-        <div class="btn-group">
-          <a href="#" class="btn-blue">Selengkapnya</a>
-          <a href="#" class="btn-outline">Beli</a>
+      </div>
+    </section>
+
+    <!-- BAGIAN 3: GRID 2x2 -->
+    <div class="grid-2x2-target">
+      <!-- Kotak 1: Watch Ultra 4 -->
+      <div class="grid-box-target">
+        <div class="product-info-grid-target">
+          <h3><img src="logo.png" alt="Apple Logo" class="apple-logo-img" />WATCH</h3>
+          <span class="series-tag-target ultra-tag-target">ULTRA 4</span>
+          <p>Dibuat untuk ketahanan petualangan ekstrem.</p>
+          <div class="info-details-target">Tersedia mulai 9.18</div>
+          <div class="btn-group-target">
+            <a href="#" class="btn-blue-target">Selengkapnya</a>
+            <a href="#" class="btn-outline-blue-target">Beli</a>
+          </div>
+        </div>
+        <div class="product-image-grid-target">
+          <img src="gambar1.jpg" alt="Watch Ultra 4" />
         </div>
       </div>
 
-      <div class="grid-box">
-        <div>
-          <h3 style="font-size: 28px; font-weight: 600">WATCH ULTRA 4</h3>
-          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
-            Dibuat untuk ketahanan petualangan ekstrem.
-          </p>
+      <!-- Kotak 2: AirPods 5 -->
+      <div class="grid-box-target airpods-box-target">
+        <div class="product-image-grid-airpods-target">
+          <img src="gambar4.jpg" alt="AirPods 5" />
         </div>
-        <img src="gambar1.jpeg" alt="Apple Watch Ultra 4" />
-        <div class="btn-group">
-          <a href="#" class="btn-blue">Selengkapnya</a>
-          <a href="#" class="btn-outline">Beli</a>
+        <div class="product-info-grid-target airpods-info-target">
+          <h4>AirPods 5</h4>
+          <p>Rasakan keajaiban Pembatalan Kebisingan Aktif.</p>
+          <div class="info-details-target">Tersedia mulai 9.20</div>
+          <div class="btn-group-target">
+            <a href="#" class="btn-blue-target">Pelajari selengkapnya</a>
+            <a href="#" class="btn-outline-blue-target">Beli</a>
+          </div>
         </div>
       </div>
     </div>
@@ -158,32 +119,5 @@
     <footer>
       <p>Hak Cipta © 2026 Apple Inc. Dilindungi undang-undang.</p>
     </footer>
-
-    <!-- Script Dropdown Navbar -->
-    <script>
-      function toggleDropdown(menuId) {
-        const dropdowns = document.querySelectorAll(".dropdown-menu");
-
-        dropdowns.forEach((menu) => {
-          if (menu.id !== menuId) {
-            menu.classList.remove("active");
-          }
-        });
-
-        const targetMenu = document.getElementById(menuId);
-        targetMenu.classList.toggle("active");
-      }
-
-      window.onclick = function (event) {
-        if (
-          !event.target.closest(".global-nav") &&
-          !event.target.closest(".dropdown-menu")
-        ) {
-          document.querySelectorAll(".dropdown-menu").forEach((menu) => {
-            menu.classList.remove("active");
-          });
-        }
-      };
-    </script>
   </body>
 </html>
