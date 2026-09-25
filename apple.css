@@ -1,292 +1,528 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
   background-color: #000000;
   color: #f5f5f7;
+  overflow-x: hidden;
 }
 
-/* Navigation Bar */
+/* Navbar Utama */
 .global-nav {
-  background: rgba(22, 22, 23, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 9999;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
   max-width: 1024px;
   margin: 0 auto;
-  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  list-style: none;
 }
 
 .nav-item {
-  margin: 0 12px;
-  font-size: 12px;
-  color: #f5f5f7;
   cursor: pointer;
+  color: #f5f5f7;
+  font-size: 12px;
   opacity: 0.8;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.nav-logo {
-  height: 18px;
-  width: auto;
-  filter: invert(1);
+.nav-item:hover {
+  opacity: 1;
 }
 
-/* Logo Apple di samping Tulisan WATCH */
-.apple-logo-img {
-  height: 28px;
-  width: auto;
-  margin-right: 6px;
-  filter: invert(1);
-  display: inline-block;
+/* Dropdown Menu dengan Efek Soft, Slide, dan Bayangan Blur Apple */
+.dropdown-menu {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  color: #1d1d1f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+  padding: 40px 0 60px;
+  z-index: 999;
+  
+  /* Logika transisi halus (soft slide-down) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.32s;
+  pointer-events: none;
 }
 
-/* Showcase iPhone 17 Pro */
-.showcase-section {
-  text-align: center;
-  padding: 60px 20px 0;
-  background: #000000;
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Lapisan latar belakang redup (Backdrop Overlay) */
+.nav-backdrop {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 48px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.32s ease, visibility 0.32s;
+  z-index: 998;
+  pointer-events: none;
+}
+
+.nav-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.dropdown-column h4 {
+  font-size: 12px;
+  color: #86868b;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.dropdown-column ul {
+  list-style: none;
+}
+
+.dropdown-column li {
   margin-bottom: 12px;
 }
 
-.product-info h2 {
-  font-size: 48px;
+.dropdown-column a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 20px;
   font-weight: 600;
-  color: #f5f5f7;
+  transition: color 0.2s;
 }
 
-.product-info p {
-  font-size: 21px;
-  margin-top: 6px;
-  color: #86868b;
+.dropdown-column a:hover {
+  color: #0066cc;
 }
 
-.btn-group, .btn-group-target {
-  margin-top: 15px;
+.dropdown-column li.small-link a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #1d1d1f;
+}
+
+.dropdown-column li.small-link a:hover {
+  color: #0066cc;
+}
+
+/* Showcase Sections */
+.showcase-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 48px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #000;
+  border-bottom: 12px solid #111;
+  padding: 40px 20px;
 }
 
-.btn-blue, .btn-blue-target {
-  background: #0071e3;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 980px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btn-outline, .btn-outline-blue-target {
-  border: 1px solid #0071e3;
-  color: #2997ff;
-  padding: 8px 16px;
-  border-radius: 980px;
-  text-decoration: none;
-  font-size: 14px;
+.product-layer {
+  position: relative;
+  z-index: 2;
+  max-width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-layer img {
-  max-width: 100%;
+  max-width: 650px;
+  width: 100%;
   height: auto;
-  margin-top: 30px;
+  border-radius: 16px;
 }
 
-/* BAGIAN 1: iPhone Duo */
-.section-duo-target {
-  background-color: #ffffff;
-  color: #1d1d1f;
-  text-align: center;
-  padding-top: 55px;
-  margin-bottom: 12px;
-  width: 100%;
-}
-
-.product-info-target h2 {
-  font-size: 52px;
-  font-weight: 600;
-}
-
-.product-info-target p {
-  font-size: 24px;
-  margin-top: 4px;
-}
-
-.info-details-target {
-  font-size: 14px;
-  color: #86868b;
-  margin-top: 10px;
-  line-height: 1.4;
-}
-
-/* Gambar iPhone Duo Penuh */
-.product-image-target {
-  width: 100%;
-  margin-top: 30px;
-}
-
-.product-image-target img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: contain;
-  display: block;
-}
-
-/* BAGIAN 2: Watch Series 12 */
-.section-watch12-target {
-  background-color: #000000;
-  color: #f5f5f7;
-  text-align: center;
-  padding: 60px 0 80px;
-  width: 100%;
-}
-
-.section-watch12-target .product-info-target h3 {
-  font-size: 40px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.series-tag-target {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 0.12em;
-  margin-top: 2px;
-}
-
-/* Gambar Watch Series 12 Penuh */
-.product-image-full-target {
-  width: 100%;
-  margin: 30px 0;
-}
-
-.product-image-full-target img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: contain;
-  display: block;
-}
-
-/* BAGIAN 3: Grid 2x2 */
-.grid-2x2-target {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 0 12px 12px;
-  background-color: #000000;
-}
-
-.grid-box-target {
-  background-color: #161617;
-  border-radius: 18px;
-  padding-top: 50px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 580px;
-  position: relative;
-  overflow: hidden;
-}
-
-.product-info-grid-target h3 {
-  font-size: 28px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ultra-tag-target {
-  color: #f5f5f7;
-}
-
-.product-info-grid-target p {
-  font-size: 16px;
-  color: #86868b;
-  max-width: 280px;
-  margin: 8px auto 0;
-}
-
-/* Gambar Watch Ultra 4 Mengisi Kotak Grid */
-/* Gambar Watch Ultra 4 Mengisi Kotak Grid */
-.product-image-grid-target {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-}
-
-.product-image-grid-target img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}.product-info-grid-target {
-  position: relative;
+.product-info {
+  margin-top: 20px;
   z-index: 2;
 }
 
-/* AirPods 5 */
-.airpods-box-target {
-  background-color: #000000;
-  padding: 0;
+.product-info h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.product-image-grid-airpods-target {
+.product-info p {
+  font-size: 18px;
+  color: #86868b;
+  margin-bottom: 16px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-blue {
+  background-color: #0071e3;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  padding: 8px 18px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-outline:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+/* Grid Showcase Dua Kolom */
+.grid-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.grid-box {
+  background-color: #0b0b0b;
+  border: 1px solid #1f1f1f;
+  border-radius: 20px;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.grid-box img {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+.grid-box-light {
+  background-color: #fbfbfd;
+  border: 1px solid #e5e5e7;
+}
+
+.grid-box-macbook {
+  background: linear-gradient(180deg, #eef5fa 0%, #e2eef7 100%);
+  border: 1px solid #d4e3ee;
+}
+
+.grid-box-card {
+  background: #fbfbfd;
+  border: 1px solid #e5e5e7;
+}
+
+.card-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d1d1f;
+  gap: 4px;
+}
+
+.title-logo {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  object-fit: contain;
+}
+
+/* Apple TV Carousel Swipe */
+.tv-carousel-section {
   width: 100%;
-  height: 100%;
+  margin: 50px 0;
+  overflow: hidden;
+  position: relative;
 }
 
-.product-image-grid-airpods-target img {
+.tv-track {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+
+.tv-track.active {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+.tv-track::-webkit-scrollbar {
+  display: none;
+}
+.tv-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tv-card {
+  flex: 0 0 85%;
+  max-width: 1100px;
+  height: 520px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+  background-color: #050505;
+}
+
+.tv-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  pointer-events: none;
 }
 
-.airpods-info-target {
+.tv-badge {
   position: absolute;
-  bottom: 40px;
-  left: 0;
-  width: 100%;
+  bottom: 35px;
+  left: 45px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 10px 22px;
+  border-radius: 980px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.airpods-info-target h4 {
-  font-size: 28px;
+.tv-btn {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
   font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 980px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.tv-btn:hover {
+  opacity: 0.85;
+}
+
+.tv-text {
   color: #f5f5f7;
+  font-size: 14px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 24px;
+/* Footnote Styling */
+.apple-footnote {
+  background-color: #f5f5f7;
+  color: #6e6e73;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 30px 16px;
+  border-top: 1px solid #d2d2d7;
+}
+
+.footnote-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footnote-intro,
+.footnote-closing {
+  margin-bottom: 12px;
+}
+
+.footnote-list {
+  padding-left: 18px;
+  margin-bottom: 14px;
+}
+
+.footnote-list li {
+  margin-bottom: 8px;
+}
+
+.apple-footnote a {
+  color: #424245;
+  text-decoration: underline;
+}
+
+.apple-footnote a:hover {
+  color: #0066cc;
+}
+
+/* Footer Styling */
+.apple-global-footer {
+  background-color: #f5f5f7;
+  color: #6e6e73;
   font-size: 12px;
-  color: #86868b;
-  background: #161617;
+  line-height: 1.33337;
+  padding: 24px 16px 40px;
+  border-top: 1px solid #d2d2d7;
 }
 
-@media (max-width: 734px) {
-  .grid-2x2-target {
+.footer-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footer-directory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.footer-column h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #424245;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #1d1d1f;
+  text-decoration: underline;
+}
+
+.footer-shop {
+  padding: 16px 0;
+  border-bottom: 1px solid #d2d2d7;
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+.footer-shop a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  gap: 12px;
+}
+
+.footer-copyright {
+  color: #6e6e73;
+}
+
+.footer-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #424245;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links span {
+  color: #d2d2d7;
+}
+
+.footer-locale a {
+  color: #424245;
+  text-decoration: none;
+}
+
+.footer-locale a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-directory {
     grid-template-columns: 1fr;
   }
 }

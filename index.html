@@ -10,23 +10,415 @@
     <!-- Navbar -->
     <nav class="global-nav">
       <ul class="nav-list">
+        <!-- Logo Apple PNG -->
         <li class="nav-item">
-          <a href="#"><img src="logo.png" alt="Apple Logo" class="nav-logo" /></a>
+          <a href="#"
+            ><img
+              src="logo.png"
+              alt="Apple Logo"
+              style="height: 40px; width: auto"
+          /></a>
         </li>
         <li class="nav-item" onclick="toggleDropdown('store')">Store</li>
         <li class="nav-item" onclick="toggleDropdown('mac')">Mac</li>
-        <li class="nav-item">iPad</li>
-        <li class="nav-item">iPhone</li>
-        <li class="nav-item">Watch</li>
-        <li class="nav-item">Vision</li>
-        <li class="nav-item">AirPods</li>
-        <li class="nav-item">TV & Rumah</li>
-        <li class="nav-item">Hiburan</li>
-        <li class="nav-item">Support</li>
+        <li class="nav-item" onclick="toggleDropdown('ipad')">iPad</li>
+        <li class="nav-item" onclick="toggleDropdown('iphone')">iPhone</li>
+        <li class="nav-item" onclick="toggleDropdown('watch')">Watch</li>
+        <li class="nav-item" onclick="toggleDropdown('vision')">Vision</li>
+        <li class="nav-item" onclick="toggleDropdown('airpods')">AirPods</li>
+        <li class="nav-item" onclick="toggleDropdown('tv-home')">TV & Rumah</li>
+        <li class="nav-item" onclick="toggleDropdown('accessories')">Accessories</li>
+        <li class="nav-item" onclick="toggleDropdown('support')">Support</li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
       </ul>
     </nav>
 
-    <!-- Showcase iPhone 17 Pro -->
+    <!-- Dropdown Store -->
+    <div id="store" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Belanja Produk Terbaru</h4>
+          <ul>
+            <li><a href="#">Belanja Semua Produk Terbaru</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Apple Watch</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li class="small-link"><a href="#">Temukan Toko</a></li>
+            <li class="small-link"><a href="#">Status Pesanan</a></li>
+            <li class="small-link"><a href="#">Tukar Tambah Apple</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Toko Khusus Belanja</h4>
+          <ul>
+            <li class="small-link"><a href="#">Pendidikan</a></li>
+            <li class="small-link"><a href="#">Bisnis</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Mac -->
+    <div id="mac" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Jelajahi Mac</h4>
+          <ul>
+            <li><a href="#">Jelajahi Semua Mac</a></li>
+            <li><a href="#">MacBook Air</a></li>
+            <li><a href="#">MacBook Pro</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Toko Mac</h4>
+          <ul>
+            <li class="small-link"><a href="#">Toko Mac</a></li>
+            <li class="small-link"><a href="#">Bantu Saya Memilih</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Selengkapnya dari Mac</h4>
+          <ul>
+            <li class="small-link"><a href="#">Dukungan Mac</a></li>
+            <li class="small-link"><a href="#">macOS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown iPad -->
+    <div id="ipad" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore iPad</h4>
+          <ul>
+            <li><a href="#">Explore All iPad</a></li>
+            <li><a href="#">iPad Pro</a></li>
+            <li><a href="#">iPad Air</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPad mini</a></li>
+            <li><a href="#">Apple Pencil</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Compare iPad</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop iPad</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop iPad</a></li>
+            <li class="small-link"><a href="#">iPad Accessories</a></li>
+            <li class="small-link"><a href="#">Apple Upgrade</a></li>
+            <li class="small-link"><a href="#">Apple Trade In</a></li>
+            <li class="small-link"><a href="#">Financing</a></li>
+            <li class="small-link"><a href="#">Personal Setup</a></li>
+            <li class="small-link"><a href="#">College Student Offer</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from iPad</h4>
+          <ul>
+            <li class="small-link"><a href="#">iPad Support</a></li>
+            <li class="small-link"><a href="#">AppleCare</a></li>
+            <li class="small-link"><a href="#">iPadOS 27</a></li>
+            <li class="small-link"><a href="#">Apple Intelligence and Siri</a></li>
+            <li class="small-link"><a href="#">Apps by Apple</a></li>
+            <li class="small-link"><a href="#">Apple Creator Studio</a></li>
+            <li class="small-link"><a href="#">iCloud+</a></li>
+            <li class="small-link"><a href="#">Education</a></li>
+            <li class="small-link"><a href="#">Apple at Work</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown iPhone -->
+    <div id="iphone" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore iPhone</h4>
+          <ul>
+            <li><a href="#">Explore All iPhone</a></li>
+            <li><a href="#">iPhone Duo</a></li>
+            <li><a href="#">iPhone 18 Pro</a></li>
+            <li><a href="#">iPhone Air</a></li>
+            <li><a href="#">iPhone 17</a></li>
+            <li><a href="#">iPhone 17e</a></li>
+            <li><a href="#">iPhone 16</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Compare iPhone</a></li>
+            <li class="small-link"><a href="#">Switch from Android</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop iPhone</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop iPhone</a></li>
+            <li class="small-link"><a href="#">iPhone Accessories</a></li>
+            <li class="small-link"><a href="#">Apple Upgrade</a></li>
+            <li class="small-link"><a href="#">Apple Trade In</a></li>
+            <li class="small-link"><a href="#">Carrier Deals at Apple</a></li>
+            <li class="small-link"><a href="#">Financing</a></li>
+            <li class="small-link"><a href="#">Personal Setup</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from iPhone</h4>
+          <ul>
+            <li class="small-link"><a href="#">iPhone Support</a></li>
+            <li class="small-link"><a href="#">AppleCare</a></li>
+            <li class="small-link"><a href="#">iOS 27</a></li>
+            <li class="small-link"><a href="#">Apple Intelligence and Siri</a></li>
+            <li class="small-link"><a href="#">Apps by Apple</a></li>
+            <li class="small-link"><a href="#">iPhone Privacy</a></li>
+            <li class="small-link"><a href="#">Better with Mac</a></li>
+            <li class="small-link"><a href="#">iCloud+</a></li>
+            <li class="small-link"><a href="#">Wallet, Pay, Card</a></li>
+            <li class="small-link"><a href="#">Apple at Work</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Watch -->
+    <div id="watch" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore Watch</h4>
+          <ul>
+            <li><a href="#">Explore All Apple Watch</a></li>
+            <li><a href="#">Apple Watch Series 12</a></li>
+            <li><a href="#">Apple Watch Ultra 4</a></li>
+            <li><a href="#">Apple Watch SE 3</a></li>
+            <li><a href="#">Apple Watch Nike</a></li>
+            <li><a href="#">Apple Watch Hermès</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Compare Watch</a></li>
+            <li class="small-link"><a href="#">Why Apple Watch</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop Watch</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop Apple Watch</a></li>
+            <li class="small-link"><a href="#">Apple Watch Bands</a></li>
+            <li class="small-link"><a href="#">Apple Watch Accessories</a></li>
+            <li class="small-link"><a href="#">Apple Upgrade</a></li>
+            <li class="small-link"><a href="#">Apple Trade In</a></li>
+            <li class="small-link"><a href="#">Financing</a></li>
+            <li class="small-link"><a href="#">Personal Setup</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from Watch</h4>
+          <ul>
+            <li class="small-link"><a href="#">Apple Watch Support</a></li>
+            <li class="small-link"><a href="#">AppleCare</a></li>
+            <li class="small-link"><a href="#">watchOS 27</a></li>
+            <li class="small-link"><a href="#">Apple Watch For Your Kids</a></li>
+            <li class="small-link"><a href="#">Apps by Apple</a></li>
+            <li class="small-link"><a href="#">Apple Fitness+</a></li>
+            <li class="small-link"><a href="#">Education</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Vision -->
+    <div id="vision" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore Vision</h4>
+          <ul>
+            <li><a href="#">Explore Apple Vision Pro</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Tech Specs</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop Vision</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop Apple Vision Pro</a></li>
+            <li class="small-link"><a href="#">Apple Vision Pro Accessories</a></li>
+            <li class="small-link"><a href="#">Book a Demo</a></li>
+            <li class="small-link"><a href="#">Financing</a></li>
+            <li class="small-link"><a href="#">Personal Setup</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from Vision</h4>
+          <ul>
+            <li class="small-link"><a href="#">Apple Vision Pro Support</a></li>
+            <li class="small-link"><a href="#">AppleCare</a></li>
+            <li class="small-link"><a href="#">visionOS 27</a></li>
+            <li class="small-link"><a href="#">Apple Vision Pro for Enterprise</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown AirPods -->
+    <div id="airpods" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore AirPods</h4>
+          <ul>
+            <li><a href="#">Explore All AirPods</a></li>
+            <li><a href="#">AirPods 5</a></li>
+            <li><a href="#">AirPods Pro 3</a></li>
+            <li><a href="#">AirPods Max 2</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Compare AirPods</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop AirPods</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop AirPods 5</a></li>
+            <li class="small-link"><a href="#">Shop AirPods Pro 3</a></li>
+            <li class="small-link"><a href="#">Shop AirPods Max 2</a></li>
+            <li class="small-link"><a href="#">AirPods Accessories</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from AirPods</h4>
+          <ul>
+            <li class="small-link"><a href="#">AirPods Support</a></li>
+            <li class="small-link"><a href="#">AppleCare</a></li>
+            <li class="small-link"><a href="#">Hearing Health</a></li>
+            <li class="small-link"><a href="#">Apple Music</a></li>
+            <li class="small-link"><a href="#">Apple Fitness+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown TV & Rumah -->
+    <div id="tv-home" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore TV &amp; Home</h4>
+          <ul>
+            <li><a href="#">Explore TV &amp; Home</a></li>
+            <li><a href="#">Apple TV 4K</a></li>
+            <li><a href="#">HomePod</a></li>
+            <li><a href="#">HomePod mini</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop TV &amp; Home</h4>
+          <ul>
+            <li class="small-link"><a href="#">Shop Apple TV 4K</a></li>
+            <li class="small-link"><a href="#">Shop HomePod</a></li>
+            <li class="small-link"><a href="#">Shop HomePod mini</a></li>
+            <li class="small-link"><a href="#">Shop Siri Remote</a></li>
+            <li class="small-link"><a href="#">TV &amp; Home Accessories</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More from TV &amp; Home</h4>
+          <ul>
+            <li class="small-link"><a href="#">Apple TV Support</a></li>
+            <li class="small-link"><a href="#">HomePod Support</a></li>
+            <li class="small-link"><a href="#">AppleCare for Apple TV</a></li>
+            <li class="small-link"><a href="#">AppleCare for HomePod</a></li>
+            <li class="small-link"><a href="#">Apple TV app</a></li>
+            <li class="small-link"><a href="#">Apple TV</a></li>
+            <li class="small-link"><a href="#">Home app</a></li>
+            <li class="small-link"><a href="#">Apple Music</a></li>
+            <li class="small-link"><a href="#">AirPlay</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Accessories -->
+    <div id="accessories" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Shop by Product</h4>
+          <ul>
+            <li><a href="#">Shop All Accessories</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">Apple Watch</a></li>
+            <li><a href="#">Apple Vision Pro</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">TV &amp; Home</a></li>
+            <li><a href="#">AirTag</a></li>
+            <li><a href="#">Beats</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Shop by Category</h4>
+          <ul>
+            <li class="small-link"><a href="#">Headphones &amp; Speakers</a></li>
+            <li class="small-link"><a href="#">Chargers &amp; Adapters</a></li>
+            <li class="small-link"><a href="#">Smart Home Essentials</a></li>
+            <li class="small-link"><a href="#">Cases &amp; Protection</a></li>
+            <li class="small-link"><a href="#">Content Creation</a></li>
+            <li class="small-link"><a href="#">Gaming</a></li>
+            <li class="small-link"><a href="#">Hard Drives &amp; Storage</a></li>
+            <li class="small-link"><a href="#">Mice &amp; Keyboards</a></li>
+            <li class="small-link"><a href="#">Health &amp; Fitness</a></li>
+            <li class="small-link"><a href="#">Office Accessories</a></li>
+            <li class="small-link"><a href="#">Software</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>More to Explore</h4>
+          <ul>
+            <li class="small-link"><a href="#">New Arrivals</a></li>
+            <li class="small-link"><a href="#">Made by Apple</a></li>
+            <li class="small-link"><a href="#">Accessibility</a></li>
+            <li class="small-link"><a href="#">Assistive Technologies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown Support -->
+    <div id="support" class="dropdown-menu">
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <h4>Explore Support</h4>
+          <ul>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Apple Vision Pro</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">TV</a></li>
+            <li class="small-link" style="margin-top: 16px;"><a href="#">Explore Support</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Get Help</h4>
+          <ul>
+            <li class="small-link"><a href="#">Community</a></li>
+            <li class="small-link"><a href="#">Check Coverage</a></li>
+            <li class="small-link"><a href="#">Genius Bar</a></li>
+            <li class="small-link"><a href="#">Repair</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-column">
+          <h4>Helpful Topics</h4>
+          <ul>
+            <li class="small-link"><a href="#">Get AppleCare</a></li>
+            <li class="small-link"><a href="#">Apple Account and Password</a></li>
+            <li class="small-link"><a href="#">Billing &amp; Subscriptions</a></li>
+            <li class="small-link"><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Showcase 1: iPhone Pro -->
     <section class="showcase-section">
       <div class="product-info">
         <h2>iPhone 18 Pro</h2>
@@ -36,88 +428,192 @@
           <a href="#" class="btn-outline">Beli</a>
         </div>
       </div>
-      <div class="product-layer">
-        <img src="gambarawal.png" alt="iPhone Pro" />
+      <div class="product-layer" style="margin-top: 30px">
+        <img src="gambarawal.jpeg" alt="iPhone Pro" />
       </div>
     </section>
 
-    <!-- BAGIAN 1: iPhone Duo -->
-    <section class="section-duo-target">
-      <div class="product-info-target">
+    <!-- Showcase 2: iPhone Duo / Lipat -->
+    <section class="showcase-section">
+      <div class="product-info">
         <h2>iPhone Duo</h2>
         <p>Masa depan dalam genggaman Anda. Layar lipat revolusioner.</p>
-        <div class="info-details-target">
-          Pre-order mulai 05.00 pagi. PT pada 10.16<br />
-          Tersedia mulai 10.23
-        </div>
-        <div class="btn-group-target">
-          <a href="#" class="btn-blue-target">Pelajari selengkapnya</a>
-          <a href="#" class="btn-outline-blue-target">Lihat harga</a>
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Pelajari selengkapnya</a>
+          <a href="#" class="btn-outline">Lihat harga</a>
         </div>
       </div>
-      <div class="product-image-target">
-        <img src="gambar3.jpg" alt="iPhone Duo" />
+      <div class="product-layer" style="margin-top: 30px">
+        <img src="gambar3.png" alt="iPhone Duo" style="max-width: 500px" />
       </div>
     </section>
 
-    <!-- BAGIAN 2: WATCH SERIES 12 -->
-    <section class="section-watch12-target">
-      <div class="product-info-target">
-        <h3><img src="logo.png" alt="Apple Logo" class="apple-logo-img" />WATCH</h3>
-        <span class="series-tag-target">SERIES 12</span>
-      </div>
-      <div class="product-image-full-target">
-        <img src="gambar2.jpg" alt="Watch Series 12" />
-      </div>
-      <div class="product-details-target">
-        <p>Sensor kesehatan detak jantung mutakhir.</p>
-        <div class="info-details-target">Tersedia mulai 9.18</div>
-        <div class="btn-group-target">
-          <a href="#" class="btn-blue-target">Selengkapnya</a>
-          <a href="#" class="btn-outline-blue-target">Beli</a>
+    <!-- Grid Showcase 1: Apple Watch -->
+    <div class="grid-showcase">
+      <div class="grid-box">
+        <div>
+          <h3 style="font-size: 28px; font-weight: 600">WATCH SERIES 12</h3>
+          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
+            Sensor kesehatan detak jantung mutakhir.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- BAGIAN 3: GRID 2x2 -->
-    <div class="grid-2x2-target">
-      <!-- Kotak 1: Watch Ultra 4 -->
-      <div class="grid-box-target">
-        <div class="product-info-grid-target">
-          <h3><img src="logo.png" alt="Apple Logo" class="apple-logo-img" />WATCH</h3>
-          <span class="series-tag-target ultra-tag-target">ULTRA 4</span>
-          <p>Dibuat untuk ketahanan petualangan ekstrem.</p>
-          <div class="info-details-target">Tersedia mulai 9.18</div>
-          <div class="btn-group-target">
-            <a href="#" class="btn-blue-target">Selengkapnya</a>
-            <a href="#" class="btn-outline-blue-target">Beli</a>
-          </div>
-        </div>
-        <div class="product-image-grid-target">
-          <img src="gambar1.jpg" alt="Watch Ultra 4" />
+        <img src="gambar2.png" alt="Apple Watch Series 12" />
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Selengkapnya</a>
+          <a href="#" class="btn-outline">Beli</a>
         </div>
       </div>
 
-      <!-- Kotak 2: AirPods 5 -->
-      <div class="grid-box-target airpods-box-target">
-        <div class="product-image-grid-airpods-target">
-          <img src="gambar4.jpg" alt="AirPods 5" />
+      <div class="grid-box">
+        <div>
+          <h3 style="font-size: 28px; font-weight: 600">WATCH ULTRA 4</h3>
+          <p style="color: #86868b; font-size: 15px; margin-top: 4px">
+            Dibuat untuk ketahanan petualangan ekstrem.
+          </p>
         </div>
-        <div class="product-info-grid-target airpods-info-target">
-          <h4>AirPods 5</h4>
-          <p>Rasakan keajaiban Pembatalan Kebisingan Aktif.</p>
-          <div class="info-details-target">Tersedia mulai 9.20</div>
-          <div class="btn-group-target">
-            <a href="#" class="btn-blue-target">Pelajari selengkapnya</a>
-            <a href="#" class="btn-outline-blue-target">Beli</a>
-          </div>
+        <img src="gambar1.png" alt="Apple Watch Ultra 4" />
+        <div class="btn-group">
+          <a href="#" class="btn-blue">Selengkapnya</a>
+          <a href="#" class="btn-outline">Beli</a>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <p>Hak Cipta © 2026 Apple Inc. Dilindungi undang-undang.</p>
-    </footer>
-  </body>
-</html>
+    <!-- Grid Showcase 2: Apple Upgrade & Carrier Deals -->
+    <div class="grid-showcase">
+      <div class="grid-box grid-box-light">
+        <div>
+          <h3 class="card-title">
+            <img src="logo.png" alt="Apple Logo" class="title-logo" />Upgrade
+          </h3>
+          <p style="color: #1d1d1f; font-size: 16px; margin-top: 6px;">
+            Love it. Lease it. Upgrade it.²
+          </p>
+          <div class="btn-group" style="margin-top: 12px;">
+            <a href="#" class="btn-blue">Learn more</a>
+          </div>
+        </div>
+        <img src="watch.png" alt="Apple Watch Upgrade" style="max-height: 280px;" />
+      </div>
+
+      <div class="grid-box grid-box-light">
+        <div>
+          <h3 style="font-size: 32px; font-weight: 700; color: #1d1d1f; line-height: 1.2;">
+            Incredible carrier<br />deals at Apple
+          </h3>
+          <p style="color: #1d1d1f; font-size: 15px; margin-top: 6px;">
+            Explore deals that accept eligible<br />trade-in devices in any condition.³
+          </p>
+          <div class="btn-group" style="margin-top: 12px;">
+            <a href="#" class="btn-blue">Find your deal</a>
+          </div>
+        </div>
+        <img src="ip188.png" alt="Carrier Deals iPhone" style="max-height: 280px;" />
+      </div>
+    </div>
+
+    <!-- Grid Showcase 3: MacBook Air & Apple Card -->
+    <div class="grid-showcase">
+      <!-- Card MacBook Air -->
+      <div class="grid-box grid-box-macbook">
+        <div>
+          <h3 style="font-size: 32px; font-weight: 700; color: #1d1d1f;">MacBook Air</h3>
+          <p style="color: #1d1d1f; font-size: 16px; margin-top: 6px;">
+            Now supercharged by M5.
+          </p>
+          <div class="btn-group" style="margin-top: 12px;">
+            <a href="#" class="btn-blue">Learn more</a>
+            <a href="#" class="btn-outline">Buy</a>
+          </div>
+        </div>
+        <img src="p.png" alt="MacBook Air" style="max-height: 280px;" />
+      </div>
+
+      <!-- Card Apple Card -->
+      <div class="grid-box grid-box-card">
+        <div>
+          <h3 class="card-title">
+            <img src="logoo.png" alt="Apple Logo" class="title-logo" />Card
+          </h3>
+          <p style="color: #1d1d1f; font-size: 15px; margin-top: 6px;">
+            Get up to 3% Daily Cash back<br />with every purchase.
+          </p>
+          <div class="btn-group" style="margin-top: 12px;">
+            <a href="#" class="btn-blue">Learn more</a>
+            <a href="#" class="btn-outline">Apply now</a>
+          </div>
+        </div>
+        <img src="pad.png" alt="Apple Card" style="max-height: 280px;" />
+      </div>
+    </div>
+
+    <!-- Apple TV+ Carousel Swipe Section -->
+    <section class="tv-carousel-section">
+      <div class="tv-track" id="tvTrack">
+        <!-- Card 1: v1.png -->
+        <div class="tv-card">
+          <img src="v1.png" alt="Friday Night Baseball" class="tv-img" />
+          <div class="tv-badge">
+            <a href="#" class="tv-btn">See the schedule</a>
+            <span class="tv-text">Live MLB games, every Friday.</span>
+          </div>
+        </div>
+
+        <!-- Card 2: v2.png -->
+        <div class="tv-card">
+          <img src="v2.png" alt="Apple TV Series" class="tv-img" />
+          <div class="tv-badge">
+            <a href="#" class="tv-btn">Stream now</a>
+            <span class="tv-text"><strong>Sci-Fi</strong> • There's no world like home.</span>
+          </div>
+        </div>
+
+        <!-- Card 3: v3.png -->
+        <div class="tv-card">
+          <img src="v3.png" alt="Apple TV Feature" class="tv-img" />
+          <div class="tv-badge">
+            <a href="#" class="tv-btn">Stream now</a>
+            <span class="tv-text">Watch exclusively on Apple TV+.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footnote / Legal Notes Section -->
+    <section class="apple-footnote">
+      <div class="footnote-container">
+        <p class="footnote-intro">
+          * Available for Qualified Purchasers only. Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad (“Eligible Product”) at a Qualifying Location through September 24, 2026. Gift card values may vary by Eligible Product. Customers will receive a discount equal to the value of the Apple Gift Card off the price of the Eligible Product, but will be charged for all items in their cart, including the Apple Gift Card. Only one Apple Gift Card per Eligible Product per Qualified Purchaser. Offer subject to availability. While supplies last. Additional restrictions apply. View full offer terms <a href="#">here</a>.
+        </p>
+        <ol class="footnote-list">
+          <li>Based on data from an Apple-conducted study of heart rate accuracy, during July and August 2026, utilizing commercially available best-selling wearables available as of June 2026. For more information, visit <a href="#">apple.com/HRAccuracy</a>.</li>
+          <li>Apple Upgrade is a device leasing program available in the U.S. (excluding U.S. territories). Leases are provided by Klarna: subject to eligibility and credit approval, including final approval at checkout. To be eligible, you must be a U.S. resident, at least 18 years old (or the legal age in your state), have an accepted credit or debit card, and have an Apple Account. Additional eligibility criteria apply. Device must be in good condition upon return; damage fees may apply. For iPhone only: In order to lease an iPhone, you must select an eligible carrier (but you cannot use a prepaid carrier plan). Upgrades require entering into a new lease and are subject to eligibility and credit approval. Apple Upgrade is not available on refurbished devices or online at the following special stores: Apple Employee Purchase Plan; participating corporate Employee Purchase Programs; Apple at Work for small businesses or enterprises; Government, Education, or Veterans and Military Purchase Programs.</li>
+          <li>AT&amp;T iPhone 18 Pro, iPhone 18 Pro Max, and iPhone 17 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of AT&amp;T trade-in credit applied over 36 months with purchase of an iPhone 18 Pro, iPhone 18 Pro Max, and iPhone 17 and trade-in of eligible smartphone. Receive credit with purchase of an iPhone 18 Pro or iPhone 18 Pro Max activated on any eligible AT&amp;T unlimited plan except Extra 2.0 Unlimited Extra, Unlimited Extra EL, Unlimited Starter, Unlimited Starter SL, Unlimited Starter(SM), or AT&amp;T Value 2.0 plans of either $1200, $930 or $350 (based upon the model of your trade-in smartphone). Receive credit with purchase of an iPhone 18 Pro or iPhone 18 Pro Max activated on an Extra 2.0 Unlimited Extra, Unlimited Extra EL, AT&amp;T Unlimited Starter, AT&amp;T Unlimited Starter SL, or AT&amp;T Unlimited Starter(SM) plan of either $930 or $350 (based upon the model of your trade-in smartphone). Receive credit with purchase of an iPhone 18 Pro or iPhone 18 Pro Max activated on an AT&amp;T Value 2.0 plan of either $500 or $350 (based upon the model of your trade-in smartphone). Receive credit with purchase of an iPhone 17 activated on any eligible AT&amp;T unlimited plan except Extra 2.0 Unlimited Extra, Unlimited Extra EL, AT&amp;T Unlimited Starter, AT&amp;T Unlimited Starter SL, or AT&amp;T Unlimited Starter(SM), or AT&amp;T Value 2.0 plans of either $900 or $350 (based upon the model of your trade-in smartphone). Receive credit with purchase of an iPhone 17 activated on an Extra 2.0 Unlimited Extra, Unlimited Extra EL, AT&amp;T Unlimited Starter, AT&amp;T Unlimited Starter SL, or AT&amp;T Unlimited Starter(SM) plan of either $900 or $350 (based upon the model of your trade-in smartphone). Receive credit with purchase of an iPhone 17 activated on AT&amp;T Value 2.0 plans of either $500 or $350 (based upon the model of your trade-in smartphone). Max bill credits will not exceed the cost of the device. Requires upgrade of an existing line or activation of a new line and purchase of a new iPhone 18 Pro, iPhone 18 Pro Max, or iPhone 17 on qualifying 36 month 0% APR installment plan, subject to carrier credit qualification. Customers purchasing this offer through Apple cannot add the Next Up Anytime option. $0 down for well qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&amp;T unlimited plan. AT&amp;T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Trade in device may not be on existing installment plan. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catchup credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited time offer; subject to change. Limits: one trade-in per qualifying purchase and one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Price for iPhone 17 includes $30 AT&amp;T connectivity discount. Activation required.</li>
+          <li>AT&amp;T iPhone Air Special Deal: Monthly price (if shown) reflects net monthly payment, after application of AT&amp;T bill credit applied over 36 months. Requires upgrade of an existing line or activation of a new line. Customers upgrading and buying an (i) iPhone Air 256 GB will get $739.36 in bill credits, (ii) an iPhone Air 512 GB and get $723.36 in bill credits (iii) an iPhone Air 1 TB and get $907.36 in bill credits. Customers activating a new line and buying an (i) iPhone Air 256 GB will get $883.36 in bill credits, (ii) an iPhone Air 512 GB and get $867.36 in bill credits (iii) an iPhone Air 1 TB and get $1051.36 in bill credits. If you are trading in a device with this deal, credits will be comprised of (i) Apple instant trade-in credit at checkout and (ii) AT&amp;T monthly bill credits applied over 36 months. Requires upgrade of an existing line (or activation of a new line) and purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. $0 down for well-qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&amp;T unlimited plan. AT&amp;T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catch-up credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Activation required.</li>
+          <li>AT&amp;T iPhone 17e Special Deal: Monthly price (if shown) reflects net monthly payment, after application of AT&amp;T bill credit applied over 36 months. Requires upgrade of an existing line or activation of a new line. Customers upgrading and buying an (i) iPhone 17e 256 GB will get $411.36 in bill credits or (ii) an iPhone 17e 512 GB and get $395.36 in bill credits. Customers activating a new line and buying an (i) iPhone 17e 256 GB will get $663.36 in bill credits or (ii) an iPhone 17e 512 GB and get $791.36 in bill credits. If you are trading in a device with this deal, credits will be comprised of (i) Apple instant trade-in credit at checkout and (ii) AT&amp;T monthly bill credits applied over 36 months. Requires purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. $0 down for well-qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&amp;T unlimited plan. AT&amp;T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catch-up credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Activation required.</li>
+          <li>T-Mobile iPhone 18 Pro and iPhone Air Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 36 months with purchase of an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air and trade-in of eligible smartphone. Any Condition trade-in accepted for Experience Beyond 2.0, Experience Beyond or Go5G Next plans (all customer types). Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over the loan term (24 or 36 months). Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time; subject to change. Qualifying credit, data plan, and trade-in (e.g., iPhone 16 Pro Max) in good condition required. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). $35 device connection charge due on next bill. May not be combinable with some offers, discounts, or promotions. Activation required. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Existing customers: Receive credit with purchase of an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air (based upon the model and condition of your trade-in smartphone) of $1200, $900 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $1000, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (including 55+, Military, &amp; First Responder Savings plans) ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be an existing T-Mobile customer.</li>
+          <li>Add-a-Line customers: Receive credit with purchase of an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air (based upon the model and condition of your trade-in smartphone) of $1200, $900 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $1000, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on a Go5G, Magenta, Magenta MAX, Essentials 2.0, or Essentials (with 55+, Military, &amp; First Responder Savings) plan ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New customers: Receive credit with purchase of an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air (based upon the model and condition of your trade-in smartphone) of $1200, $900 or $500 for customers on an Experience Beyond 2.0 plan (excluding all 55+, Military, First Responder plans) ($100+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0 plan (excluding all 55+, Military, First Responder plans) ($85+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; or $700, $500 or $300 for customers on an Essentials 2.0 plan (excluding all 55+, Military, First Responder plans) ($60+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 18 Pro and iPhone Air No Trade-in Required Deal: T-Mobile port-in bill credit applied over 36 months with purchase of an iPhone 18 Pro Max, iPhone 18 Pro, or iPhone Air. Max bill credits will not exceed the cost of the device. Line with promo must be active and in good standing to receive credits; allow 2 bill cycles. Tax on pre-credit price due at sale. Limited-time; subject to change. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). Qualifying credit, service, and port-in (AT&amp;T, Verizon, or another eligible carrier, see complete list at T-Mobile.com/port) required. $35 device connection charge due on next bill. Max 4 promotions on any iPhone per account. May not be combinable with some offers, discounts, or promotions. Activation required. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Add-a-line Customers: Buy an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air and get up to $1200 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $1000 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $900 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $700 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable). No trade-in required. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New Customers: Buy an iPhone 18 Pro, iPhone 18 Pro Max, or iPhone Air and get up to $1200 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0 plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $900 for customers on an Experience More 2.0 plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable). No trade-in required. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 17 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 36 months with purchase of an iPhone 17 and trade-in of eligible smartphone. Any Condition trade-in accepted for Experience Beyond 2.0, Experience Beyond or Go5G Next plans (all customer types). Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over the loan term (24 or 36 months). Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time; subject to change. Qualifying credit, data plan, and trade-in (e.g., iPhone 16 Pro Max) in good condition required. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). $35 device connection charge due on next bill. May not be combinable with some offers, discounts, or promotions. Activation required. Price for iPhone 17 includes $30 T-Mobile connectivity discount. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Existing customers: Receive credit with purchase of an iPhone 17 (based upon the model and condition of your trade-in smartphone) of $1099, $900 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $1000, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (including 55+, Military, &amp; First Responder Savings plans) ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be an existing T-Mobile customer.</li>
+          <li>Add-a-Line customers: Receive credit with purchase of an iPhone 17 (based upon the model and condition of your trade-in smartphone) of $1099, $900 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $1000, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($60+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on a Go5G, Magenta, Magenta MAX, Essentials 2.0, or Essentials (with 55+, Military, &amp; First Responder Savings) plan ($45+/mo. plan after AutoPay discount dan plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New customers: Receive credit with purchase of an iPhone 17 (based upon the model and condition of your trade-in smartphone) of $1099, $900 or $500 for customers on an Experience Beyond 2.0 plan (excluding all 55+, Military, First Responder plans) ($100+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; $900, $700 or $400 for customers on an Experience More 2.0 plan (excluding all 55+, Military, First Responder plans) ($85+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; or $700, $500 or $350 for customers on an Essentials 2.0 plan (excluding all 55+, Military, First Responder plans) ($60+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 17 No Trade-in Required Deal: T-Mobile port-in bill credit applied over 36 months with purchase of an iPhone 17. Max bill credits will not exceed the cost of the device. Line with promo must be active and in good standing to receive credits; allow 2 bill cycles. Tax on pre-credit price due at sale. Limited-time; subject to change. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). Qualifying credit, service, and port-in (AT&amp;T, Verizon, or another eligible carrier, see complete list at T-Mobile.com/port) required. $35 device connection charge due on next bill. Max 4 promotions on any iPhone per account. May not be combinable with some offers, discounts, or promotions. Activation required. Price for iPhone 17 includes $30 T-Mobile connectivity discount. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Add-a-line Customers: Buy an iPhone 17 and get up to $1099 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $1000 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $900 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $700 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable). No trade-in required. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New Customers: Buy an iPhone 17 and get up to $1099 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0 plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable); or up to $900 for customers on an Experience More 2.0 plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable). No trade-in required. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 17e Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 36 months with purchase of an iPhone 17e and trade-in of eligible smartphone. Any Condition trade-in accepted for Experience Beyond 2.0, Experience Beyond or Go5G Next plans (all customer types). Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over the loan term (24 or 36 months). Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time; subject to change. Qualifying credit, data plan, and trade-in (e.g., iPhone 16 Pro Max) in good condition required. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). $35 device connection charge due on next bill. May not be combinable with some offers, discounts, or promotions. Activation required. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Existing customers: Receive credit with purchase of an iPhone 17e (based upon the model and condition of your trade-in smartphone) of $899 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $899, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $899, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (including 55+, Military, &amp; First Responder Savings plans) ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be an existing T-Mobile customer.</li>
+          <li>Add-a-Line customers: Receive credit with purchase of an iPhone 17e (based upon the model and condition of your trade-in smartphone) of $899 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $899, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $899, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($60+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on a Go5G, Magenta, Magenta MAX, Essentials 2.0, or Essentials (with 55+, Military, &amp; First Responder Savings) plan ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New customers: Receive credit with purchase of an iPhone 17e (based upon the model and condition of your trade-in smartphone) of $899 or $500 for customers on an Experience Beyond 2.0 plan (excluding all 55+, Military, First Responder plans) ($100+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; $899, $700, or $400 for customers on an Experience More 2.0 plan (excluding all 55+, Military, First Responder plans) ($85+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; or $700, $500 or $350 for customers on an Essentials 2.0 plan (excluding all 55+, Military, First Responder plans) ($60+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 17e No Trade-in Required Deal: T-Mobile port-in bill credit applied over 36 months with purchase of an iPhone 17e. Max bill credits will not exceed the cost of the device. Line with promo must be active and in good standing to receive credits; allow 2 bill cycles. Tax on pre-credit price due at sale. Limited-time; subject to change. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). $35 device connection charge due on next bill. Qualifying credit, service, new voice line, and port-in (excludes Google Voice, Tracfone, Simple Mobile, Safe Link, TelCel, Total Wireless, Net 10, Straight Talk, Walmart Family Mobile, Walmart-Safelink, TruConnect (T-Mobile), Working Assets (aka Credo Mobile), T-Mobile prepaid, Metro, Assurance Wireless for Metro, Cammio, LLC, TextNow, Phone.com, Republic Wireless, Ring Central, Ooma Home Phone Support, Vonage:197D-NSR/4, Bandwidth.com, Neutral Tandem, or TCI Telephony Svcs) required. Max 4 promotions on any iPhone per account. May not be combinable with some offers, discounts, or promotions. Activation required. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Add-a-line Customers: Buy an iPhone 17e and get up to $700 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0, Experience Beyond, Experience More 2.0, Experience More, Essentials, Go5G Next, Go5G Plus, Go5G, Magenta, or Magenta MAX plan (including 55+, Military, &amp; First Responder Savings plans) ($60+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable). No trade-in required. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New Customers: Buy an iPhone 17e and get up to $700 in bill credits applied over the loan term (24 or 36 months) for customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($60+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees). No trade-in required. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 16 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 36 months with purchase of an iPhone 16 and trade-in of eligible smartphone. Any Condition trade-in accepted for Experience Beyond 2.0, Experience Beyond or Go5G Next plans (all customer types). Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over the loan term (24 or 36 months). Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time; subject to change. Qualifying credit, data plan, and trade-in (e.g., iPhone 16 Pro Max) in good condition required. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). $35 device connection charge due on next bill. May not be combinable with some offers, discounts, or promotions. Activation required. Price for iPhone 16 includes $30 T-Mobile connectivity discount. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on required finance agreement is due. Bill credits end if you pay off early.</li>
+          <li>Existing customers: Receive credit with purchase of an iPhone 16 (based upon the model and condition of your trade-in smartphone) of $799 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $799, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $799, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (including 55+, Military, &amp; First Responder Savings plans) ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be an existing T-Mobile customer.</li>
+          <li>Add-a-Line customers: Receive credit with purchase of an iPhone 16 (based upon the model and condition of your trade-in smartphone) of $799 or $500 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($100+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $799, $700 or $400 for customers on an Experience Beyond 2.0, Experience Beyond or Go5G Next (with 55+, Military, &amp; First Responder Savings) plan ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $799, $700 or $400 for customers on an Experience More 2.0, Experience More or Go5G Plus plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($85+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700, $500 or $300 for customers on an Experience More 2.0, Experience More or Go5G Plus (with 55+, Military, &amp; First Responder Savings) plan ($70+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; $700 or $350 for customers on an Experience Signature, Go5G, Magenta, Magenta MAX, Essentials 2.0 or Essentials plan (excluding all 55+, Military, &amp; First Responder Savings plans) ($60+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account; or $300 or $150 for customers on a Go5G, Magenta, Magenta MAX, Essentials 2.0, or Essentials (with 55+, Military, &amp; First Responder Savings) plan ($45+/mo. plan after AutoPay discount and plus taxes &amp; fees if applicable) Max 4 promotions on any iPhone per account. Must be a T-Mobile customer adding a new line to an existing T-Mobile account.</li>
+          <li>New customers: Receive credit with purchase of an iPhone 16 (based upon the model and condition of your trade-in smartphone) of $799 or $500 for customers on an Experience Beyond 2.0, (excluding all 55+, Military, First Responder plans) ($100+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; $799, $700 or $400 for customers on an Experience More 2.0 (excluding all 55+, Military, First Responder plans) ($85+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account; or $700, $500 or $350 for customers on an Essentials 2.0 (excluding all 55+, Military, First Responder plans) ($60+/mo. plan after AutoPay discount if applicable; plus taxes &amp; fees) Max 4 promotions on any iPhone per account. Must be a new T-Mobile customer.</li>
+          <li>T-Mobile iPhone 16 No Trade-in Required Deal: T-Mobile bill credit applied over 36 months with purchase of an iPhone 16. Max bill credits will not exceed the cost of the device. Line with promo must be active and in good standing to receive credits; allow 2 bill cycles. Tax on pre-credit price due at sale. Limited-time; subject to change. 36 month financing only available to customers on an Experience Beyond 2.0, Experience More 2.0, or Essentials 2.0 plan (other plans may only be eligible for 24 month financing). Qualifying credit, service, and port-in required (AT&amp;T, Verizon, Claro, UScellular, Xfinity, Spectrum, and Liberty PR only). $35 device connection charge due on next bill. May not be combinable with some offers, discounts, or promotions. Activation required. Price for iPhone 16 includes $30 T-Mobile connectivity discount. Contact T-Mobile before cancelling entire account to continue remaining bill credits, or credits stop &amp; balance on
